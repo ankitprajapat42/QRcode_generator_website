@@ -3,39 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../static/style.css">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
     <header>
         <div class="logo"></div>
-        <h1>QRcode Generator</h1>
+        <h1>QR Code Generator</h1>
     </header>
     <main>
         <div class="box">
-            <form action="POST">
+            <form action="/" method="post">
                 <div>
-                    <input type="text" id="url" placeholder="Enter the URL">
+                    <input type="text" id="url" name="url" placeholder="Enter the URL" required>
                 </div>
                 <div>
-                    <button>Create QRcode</button>
+                    <button type="submit">Create QR Code</button>
                 </div>    
             </form>
         </div>
 
-        <div class="Block">
-            <div class="QRcode"></div>
+        {% if qr_image %}
+        <div class="block">
+            <div class="qrcode">
+                <h2>Your QR Code:</h2>
+                <img src="{{ qr_image }}" alt="QR Code">
+            </div>
+            <div class="download_button">
+                <a href="{{ qr_image }}" download="QRCode.png">
+                    <button >Download QR Code</button>
+                </a>
+            </div>
         </div>
-        <div class="download_button">
-            <button>Create QRcode</button>
-        </div>   
-        
-
-
-        
+        {% endif %}
     </main>
-
-
-    
 </body>
 </html>
