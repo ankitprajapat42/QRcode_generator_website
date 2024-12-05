@@ -63,7 +63,7 @@ main {
 
 .box button {
     height: 40px;
-    width: 67%;
+    width: 65%;
     color: #fff;
     font-weight: bold;
     font-size: 16px;
@@ -71,7 +71,6 @@ main {
     border-radius: 5px;
     background-color: rgb(11, 155, 11);
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .box button:hover {
@@ -85,7 +84,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 2%;
+
 }
 
 .QRcode {
@@ -96,6 +96,10 @@ main {
     justify-content: center;
     align-items: center;
     background-color: #fff;
+}
+
+.QRcode h2{
+    margin: 2px;
 }
 
 .download_button {
@@ -123,3 +127,33 @@ main {
 .download_button button:hover {
     background-color: rgb(8, 120, 8);
 }
+
+footer{
+    height: 15vh;
+    width: 100%;
+}
+
+footer h3{
+    color: #444;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    
+    text-align: center;
+    margin-top: 1%;
+    
+}
+
+.foot{
+    margin-left: 35%;
+    height: auto;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 1%;
+    
+}
+
+.foot i{
+    color: rgb(0, 0, 115);
+    font-size: 30px;
+}
+

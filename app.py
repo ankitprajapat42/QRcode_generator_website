@@ -21,9 +21,10 @@ def index():
 
         # Relative path for rendering the image
         qr_image_url = "/static/qr-img.png"
+
         return render_template("index.html", qr_image=qr_image_url)
     else:
         return render_template('index.html')
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__=='__main__':
+    app.run('localhost', 100, debug=True)
